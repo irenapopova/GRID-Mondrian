@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mondrian Layout</title>
+</head>
+
+<body>
+    <section class="gallery">
+
+    </section>
+    <script>
+        const gallery = document.querySelector('.gallery');
+
+        function createHTML([h, v]) {
+            return `
+            <div class="item h${h} v${v}">
+            <img src="images/${randomNumber(20)}.png">
+            </div>   
+            `
+        }
+
+        function randomNumber(limit) {
+            return Math.floor(Math.random() * limit) + 1;
+        }
+
+        const digits = Array.from({
+            length: 20
+        }, () => [randomNumber(4), randomNumber(4)]).concat(Array.from({
+            length: 25
+        }, () => [1, 1]));
+
+
+        const html = digits.map(createHTML).join('');
+
+        gallery.innerHTML = html;
+    </script>
+
+</body>
+
+</html>
