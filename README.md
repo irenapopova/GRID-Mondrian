@@ -12,5 +12,8 @@ Mondrian's early works consisted largely of beautiful landscapes.
  
  Placement and sizes are generated randomly on-refreshing the page.
 
+ Sample Dimensions of each section
+![Measurement Graph](measurements.png)
+
 
 
